@@ -99,9 +99,13 @@ h5, h6          { font-weight: bolder }
 }
 
 
+.logo {
+    width: 10%;
+}
 
-
-
+.icon {
+    border-radius: 30px;
+}
 
 
 /*    Billboard    */
@@ -112,7 +116,7 @@ h5, h6          { font-weight: bolder }
 }
 
 .billboard.light{
-    background: url('../img/homepage_pic.jpg') no-repeat;   
+    background: url('../img/homepage_pic.JPG') no-repeat;   
      
     background-size: cover;
     -webkit-background-size: cover;
@@ -213,6 +217,7 @@ header{
 header .logo{
     float: left;
     margin-top: 50px;
+    width:10%;
 }
 
 header nav{
@@ -317,7 +322,7 @@ header.dark nav ul li a:hover{
     height: 350px;
     text-align: center;
     margin-top: 100px;
-    background: url('../img/video.jpg') no-repeat;    
+    background: url('../img/back2.jpg') no-repeat;    
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
