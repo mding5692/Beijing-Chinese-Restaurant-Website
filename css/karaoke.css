@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /*  Fonts  */
 @font-face {
@@ -94,7 +93,7 @@ h5, h6          { font-weight: bolder }
 }
 
 .billboard.light{
-    background: url('../img/contact.jpg') no-repeat;   
+    background: url('../img/karaoke.jpg') no-repeat;   
      
     background-size: cover;
     -webkit-background-size: cover;
@@ -251,6 +250,8 @@ header.dark nav ul li a:hover{
 
 .services ul li{
     list-style: none;
+    display: block;
+    width: 313px;
     float: left;
     margin-left: 80px;
     text-align: center;
@@ -364,6 +365,166 @@ header.dark nav ul li a:hover{
 
 
 
+
+
+/*    testimonials    */
+.testimonials{
+    margin-top: 100px;
+}
+
+.testimonials ul{
+    margin-top: 70px;
+    list-style: none;
+}
+
+.testimonials ul li{
+    display: block;
+    float: left;
+    margin-left: 80px;
+    width: 313px;
+}
+
+.testimonials ul li:first-child{
+    margin-left: 0;
+}
+
+.testimonials ul li .quotes{
+    margin-right: 10px;
+}
+
+.testimonials ul li p{
+    color: #838181;
+    font-family: "raleway-regular";
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: .5px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ecebeb;
+    position: relative;
+}
+
+.testimonials ul li p .triangle{
+    display: block;
+    width: 10px;
+    height: 5px;
+    background: url('../img/testimonial_triangle.png') no-repeat;
+    position: absolute;
+    bottom: -5px;
+    left: 40px;
+}
+
+.testimonials ul li .client{
+    margin-left: 20px;
+}
+
+.testimonials ul li .client img.avatar{
+    float: left;
+    margin-right: 20px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+}
+
+.testimonials ul li .client .client_details{
+    float: left;
+}
+
+.testimonials ul li .client .client_details h4{
+    color: #7b7979;
+    font-family: "raleway-semibold";
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.testimonials ul li .client .client_details h5{
+    color: #7b7979;
+    font-family: "raleway-regular";
+    font-size: 12px;
+    margin: 0;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+/*    blog posts    */
+.blog_posts{
+    margin-top: 100px;
+    padding: 100px 0;
+    background: #fafafa;
+}
+
+.blog_posts ul{
+    list-style: none;
+    margin-top: 70px;
+}
+
+.blog_posts ul li{
+    display: block;
+    width: 230px;
+    margin-left: 60px;
+    float: left;
+}
+
+.blog_posts ul li:first-child{
+    margin-left: 0;
+}
+
+.blog_posts ul li .media .date{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 40px;
+    padding: 10px 0;
+    background: rgba(62, 62, 62, .7);
+    text-align: center;
+}
+
+.blog_posts ul li .media .date span{
+    display: block;
+}
+
+.blog_posts ul li .media .date .day{
+    color: #fff;
+    font-family: "raleway-bold";
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.blog_posts ul li .media .date .month{
+    color: #fff;
+    font-family: "raleway-regular";
+    font-size: 12px;
+}
+
+.blog_posts ul li .media{
+    width: 230px;
+    height: 230px;
+    position: relative;
+}
+
+.blog_posts ul li h1{
+    color: #616161;
+    font-family: "raleway-regular";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+    margin: 20px 0 0 0;
+}
+
+
+
+
+
+
+
 /*    footer    */
 footer{
     padding: 35px 0;
@@ -416,171 +577,4 @@ footer nav ul li a{
 
 footer nav ul li a:hover{
     color: #616161;
-}
-
-#feedback-page {
-  text-align: center;
-}
-
-#text-feedback {
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  background-color: white;
-  text-align: center;
-}
-
-#form-main {
-  width: 100%;
-  float: left;
-  padding-top: 30px;
-}
-
-#form-div {
-  background-color: #3c3c3c;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 35px;
-  padding-bottom: 50px;
-  width: 450px;
-  float: left;
-  left: 50%;
-  position: absolute;
-  margin-left: -260px;
-}
-
-.feedback-input {
-  opacity: 0.9;
-  color: #0493bd;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  border-radius: 0;
-  line-height: 22px;
-  background-color: #fbfbfb;
-  border: 3px solid #fbfbfb;
-  padding: 13px 13px 13px 54px;
-  margin-bottom: 10px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.feedback-input:focus {
-  background: #fff;
-  box-shadow: 0;
-  border: 3px solid #3498db;
-  color: #3498db;
-  outline: none;
-  padding: 13px 13px 13px 54px;
-}
-
-.focused {
-  color: #30aed6;
-  border: #30aed6 solid 3px;
-}
-/* Icons ---------------------------------- */
-
-#name {
-  background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#name:focus {
-  background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
-  background-size: 30px 30px;
-  background-position: 8px 5px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#email {
-  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#email:focus {
-  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#comment {
-  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-textarea {
-  width: 100%;
-  height: 150px;
-  line-height: 150%;
-}
-
-input:hover,
-textarea:hover,
-input:focus,
-textarea:focus {
-  background-color: white;
-}
-
-#button-blue {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  float: left;
-  width: 100%;
-  border: #fbfbfb solid 4px;
-  cursor: pointer;
-  background-color: #3498db;
-  color: white;
-  font-size: 24px;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#button-blue:hover {
-  background-color: rgba(0, 0, 0, 0);
-  color: #0493bd;
-}
-
-.submit:hover {
-  color: #3498db;
-}
-
-.ease {
-  border-top: 3px #3c3c3c solid;
-  width: 0px;
-  height: 76px;
-  background-color: #fbfbfb;
-  -webkit-transition: .3s ease;
-  -moz-transition: .3s ease;
-  -o-transition: .3s ease;
-  -ms-transition: .3s ease;
-  transition: .3s ease;
-}
-
-.submit:hover .ease {
-  width: 100%;
-  background-color: white;
-}
-
-@media only screen and (max-width: 580px) {
-  #form-div {
-    left: 3%;
-    margin-right: 3%;
-    width: 88%;
-    margin-left: 0;
-    padding-left: 3%;
-    padding-right: 3%;
-  }
 }
