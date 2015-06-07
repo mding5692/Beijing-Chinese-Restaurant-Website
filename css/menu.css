@@ -93,7 +93,7 @@ h5, h6          { font-weight: bolder }
 }
 
 .billboard.light{
-    background: url('../img/karaoke2.jpg') no-repeat;   
+    background: url('../img/menu.jpg') no-repeat;   
      
     background-size: cover;
     -webkit-background-size: cover;
@@ -292,41 +292,6 @@ header.dark nav ul li a:hover{
 
 
 
-/*    Video    */
-.video{
-    display: block;
-    width: 100%;
-    height: 350px;
-    text-align: center;
-    margin-top: 100px;
-    background: url('../img/back2.jpg') no-repeat;    
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-
-.video .video_logo{
-    margin-top: 85px;
-}
-
-.video h3{
-    color: #fff;
-    font-family: "raleway-regular";
-    font-size: 14px;
-    font-weight: normal!important;
-    margin: 20px 0 0 0;
-}
-
-.video #play_btn{
-    display: inline-block;
-    width: 71px;
-    height: 71px;
-    background: url('../img/play_btn.png') no-repeat;
-    margin-top: 40px;
-}
-
-
 
 
 .title{
@@ -363,20 +328,7 @@ header.dark nav ul li a:hover{
 
 
 
-.carousel{
-    margin-top: 100px;
-    padding: 100px 0;
-    background: #fafafa;
-}
 
-.carousel h1{
-    color: #616161;
-    font-family: "raleway-regular";
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 26px;
-    margin: 20px 0 0 0;
-}
 
 
 

@@ -6,45 +6,64 @@
 	<meta name="author" content="pixelhint.com">
 	<meta name="description" content="Sublime Stunning free HTML5/CSS3 website template"/>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/fancybox-thumbs.css">
-	<link rel="stylesheet" type="text/css" href="css/fancybox-buttons.css">
-	<link rel="stylesheet" type="text/css" href="css/fancybox.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/fancybox.js"></script>
-    <script type="text/javascript" src="js/fancybox-buttons.js"></script>
-    <script type="text/javascript" src="js/fancybox-media.js"></script>
-    <script type="text/javascript" src="js/fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/wow.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/turn.min.js"></script>
 </head>
 <body>
 
 	<section class="billboard light">
 		<header class="wrapper light">
-			<a href="#"><img class="logo" src="img/logo.png" alt="Beijing Chinese Restaurant Logo"/></a>
+			<a href="#"><img class="logo" src="./img/logo.png" alt="Beijing Chinese Restaurant Logo"/></a>
 			<nav>
 				<ul>
-					<li><a href="">Home</a></li>
-					<li><a href="">Menu</a></li>
-					<li><a href="">Karaoke/Party</a></li>
-					<li><a href="">Promotions/Events</a></li>
-					<li><a href="">Contact Us</a></li>
+					<li><a href="#">Home</a></li>
+					<li><a href="./menu.html">Menu</a></li>
+					<li><a href="./karaoke.html">Karaoke/Party</a></li>
+					<li><a href="./promotions.html">Promotions/Events</a></li>
+					<li><a href="./contact.html">Contact Us</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<div class="caption light animated wow fadeInDown clearfix">
 			<h1>Welcome to Beijing Chinese Restaurant</h1>
-			<p>We are here to serve the customer</p>
+			<p>We have been one of the leading authentic Chinese and modern Asian restaurants in the kingdom for more than a decade.</p>
 			<hr>
 		</div>
 		<div class="shadow"></div>
 	</section><!--  End billboard  -->
-
-
+	
+	<!-- implemented using blasten/turn.js, search for documentation -->
+	<section id="menu-book">
+		<div> <img src="https://cloud.githubusercontent.com/assets/9067177/7999350/c130d1e2-0b17-11e5-84d2-f7bd81c0659e.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999351/c66efc74-0b17-11e5-9c0a-6f37d3a7688c.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999353/cebbb5a2-0b17-11e5-9dc9-d22ceaaee5e9.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999354/d34fe8fe-0b17-11e5-8481-92f371f32f4f.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999356/dbc02b7a-0b17-11e5-8a2c-f7fb97d5ce01.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999358/e0f48398-0b17-11e5-8c36-107b265d5138.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999376/13313612-0b18-11e5-8716-4905a6439775.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999379/17be836a-0b18-11e5-8440-e492a7c8eaa5.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999383/223bcc4e-0b18-11e5-8299-790f656950b1.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999384/26c6be54-0b18-11e5-9b88-b1dc65da8cb5.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999386/2d4505c4-0b18-11e5-8f61-7437d6abfd8a.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999389/3283f234-0b18-11e5-9668-12e13125d83f.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999391/3894b082-0b18-11e5-8660-31fd0c5112a2.jpg"></div>
+		<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999392/3e097ea8-0b18-11e5-85ca-93aa03e08c45.jpg"></div>
+	</section>
+	
+	<!-- the javascript for the turn.js -->
+	<script type="text/javascript">
+		$("#menu-book").turn({
+			width: 500,
+			height: 600,
+			autoCenter: true
+		});
+	</script>
 
 
 
