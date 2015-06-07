@@ -28,3 +28,9 @@ $(document).ready(function(){
 
 });
 
+	// using turn.js for the menu.html
+	$("#menu-book").turn({
+			width: 800,
+			height: 1000,
+			autoCenter: true
+		});
