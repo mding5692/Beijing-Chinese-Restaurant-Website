@@ -33,12 +33,7 @@ $(document).ready(function(){
 			autoCenter: true
 		});
 		
-	// using slick.js for the carousel in karaoke.html				
-	$('.images').slick({
-		  infinite: true,
-		  slidesToShow: 3,
-		  slidesToScroll: 2
-	});
+
 	
 });
 					
