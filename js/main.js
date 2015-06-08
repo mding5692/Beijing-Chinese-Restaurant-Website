@@ -26,8 +26,6 @@ $(document).ready(function(){
 	);
 	wow.init();
 
-});
-
 	// using turn.js for the menu.html
 	$("#menu_book").turn({
 			width: 800,
@@ -41,4 +39,6 @@ $(document).ready(function(){
 		  slidesToShow: 3,
 		  slidesToScroll: 2
 	});
+	
+});
 					
