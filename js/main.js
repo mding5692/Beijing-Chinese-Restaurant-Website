@@ -26,5 +26,14 @@ $(document).ready(function(){
 	);
 	wow.init();
 
-});
+	// using turn.js for the menu.html
+	$("#menu_book").turn({
+			width: 800,
+			height: 1000,
+			autoCenter: true
+		});
+		
 
+	
+});
+					

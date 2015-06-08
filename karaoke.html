@@ -6,18 +6,23 @@
 	<meta name="author" content="pixelhint.com">
 	<meta name="description" content="Sublime Stunning free HTML5/CSS3 website template"/>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/fancybox-buttons.css">
-	<link rel="stylesheet" type="text/css" href="css/fancybox.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/karaoke.css">
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/fancybox.js"></script>
-    <script type="text/javascript" src="js/fancybox-buttons.js"></script>
-    <script type="text/javascript" src="js/fancybox-media.js"></script>
     <script type="text/javascript" src="js/wow.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+    <script type="text/javascript" src="cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+    	<script>
+    	// using slick.js for the carousel in karaoke.html				
+	$('.images').slick({
+		  infinite: true,
+		  slidesToShow: 3,
+		  slidesToScroll: 2
+	});
+	
+	</script>
+    
 </head>
 <body>
 
@@ -62,13 +67,6 @@
 		</ul>
 	</section><!--  End services  -->
 
-
-	<section class="video">
-		<img src="img/video_logo.png" alt="" class="video_logo animated wow fadeInDown"/>
-		<h3 class="animated wow fadeInDown"></h3>
-		<a href="http://www.youtube.com/embed/cBJyo0tgLnw" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a>
-	</section><!--  End video  -->
-
 	<!-- carousel section of photos-->
 	<section class="carousel">
 		<div class="wrapper">
@@ -78,7 +76,7 @@
 			</div>
 			
 			<!-- uses slick.js carousel jquery plugin -->
-			<div class="guest_images">
+			<div class="images">
 				<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999307/06af2dfa-0b17-11e5-9f69-95459ebe497d.JPG"></div>
 				<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999313/104cda92-0b17-11e5-8688-7ade79b75cd6.jpg"></div>
 				<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999316/147d6ed8-0b17-11e5-877a-e643d2c7b71a.JPG"></div>
@@ -86,17 +84,6 @@
 				<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999319/26ed94a8-0b17-11e5-87fd-e4486f821b85.jpg"></div>
 				<div><img src="https://cloud.githubusercontent.com/assets/9067177/7999320/2b38e54e-0b17-11e5-8432-2f4335c604f2.jpg"></div>
 			</div>			
-				
-				
-			<script>
-				
-				$('.guest_images').slick({
-					  infinite: true,
-					  slidesToShow: 3,
-					  slidesToScroll: 2
-				});
-				
-			</script>	
 			
 		</div>
 	</section>
