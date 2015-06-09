@@ -14,15 +14,6 @@
     <script type="text/javascript" src="js/turn.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     
-    	<script>
-	// using turn.js for the menu.html
-	$("#menu_book").turn({
-			width: 700,
-			height: 1000,
-			autoCenter: true
-		});
-	</script>
-    
 </head>
 <body>
 
@@ -48,23 +39,70 @@
 		<div class="shadow"></div>
 	</section><!--  End billboard  -->
 	
-	<!-- implemented using blasten/turn.js, search for documentation -->
-	<section id="menu_book">
-		<div> <img src="./img/menu1.png"></div>
-		<div><img src="./img/menu2.png"></div>
-		<div><img src="./img/menu3.png"></div>
-		<div><img src="./img/menu4.png"></div>
-		<div><img src="./img/menu5.png"></div>
-		<div><img src="./img/menu6.png"></div>
-		<div><img src="./img/menu7.png"></div>
-		<div><img src="./img/menu8.png"></div>
-		<div><img src="./img/menu9.png"></div>
-		<div><img src="./img/menu10.png"></div>
-		<div><img src="./img/menu11.png"></div>
-		<div><img src="./img/menu12.png"></div>
-		<div><img src="./img/menu13.png"></div>
-		<div><img src="./img/menu14.png"></div>
-	</section>
+
+	<div class="flipbook-viewport">
+		<div class="container">
+			<div class="flipbook">
+				<div class="page" style="background-image:url(./img/menu1.png)"></div>
+				<div class="double" style="background-image:url(./img/menu2.png)"></div>
+				<div class="double" style="background-image:url(pages/3.jpg)"></div>
+				<div class="double" style="background-image:url(pages/4.jpg)"></div>
+				<div class="double" style="background-image:url(pages/5.jpg)"></div>
+				<div class="double" style="background-image:url(pages/6.jpg)"></div>
+				<div class="page" style="background-image:url(./img/menu14.png)"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+	
+	function loadApp() {
+	
+		var flipbook = $('.flipbook');
+	
+	 	// Check if the CSS was already loaded
+		
+		if (flipbook.width()==0 || flipbook.height()==0) {
+			setTimeout(loadApp, 10);
+			return;
+		}
+	
+		$('.flipbook .double').scissor();
+	
+		// Create the flipbook
+	
+		$('.flipbook').turn({
+	
+				width: 1000,
+	
+				height: 1000,
+				// Elevation
+	
+				elevation: 50,
+				
+				// Enable gradients
+	
+				gradients: true,
+				
+				// Auto center this flipbook
+	
+				autoCenter: true
+	
+		});
+	}
+	
+	// Load the HTML4 version if there's not CSS transform
+	
+	yepnope({
+		test : Modernizr.csstransforms,
+		yep: ['../../lib/turn.min.js'],
+		nope: ['../../lib/turn.html4.min.js'],
+		both: ['../../lib/scissor.min.js', 'css/double-page.css'],
+		complete: loadApp
+	});
+	
+	</script>
 
 
 	<footer>
