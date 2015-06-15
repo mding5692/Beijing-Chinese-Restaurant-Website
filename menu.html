@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<title>Welcome to Beijing Chinese Restaurant</title>
-	<meta charset="utf-8">
-	<meta name="author" content="pixelhint.com">
-	<meta name="description" content="Sublime Stunning free HTML5/CSS3 website template"/>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/menu.css">
-	<link rel="stylesheet" href="css/double-page.css">
+<title>Menu</title>
+<meta name="viewport" content="width = 1050, user-scalable = no" />
 
-    <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
-    <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
-    <script type="text/javascript" src="js/wow.js"></script>
-    <!--script type="text/javascript" src="js/turn.min.js"></script-->
-    
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="js/hash.js"></script>
+
 </head>
 <body>
 
-	<section class="billboard light">
-		<header class="wrapper light">
-			<a href="#"><img class="logo" src="./img/logo.png" alt="Beijing Chinese Restaurant Logo"/></a>
+	<header class="wrapper light">
+		<a href="#"><img class="logo" src="./img/logo.png" alt="Beijing Chinese Restaurant Logo"/></a>
 			<nav>
 				<ul>
 					<li><a href="#">Home</a></li>
@@ -30,107 +27,418 @@
 					<li><a href="./contact.html">Contact Us</a></li>
 				</ul>
 			</nav>
-		</header>
+	</header>
 
-		<div class="caption light animated wow fadeInDown clearfix">
-			<h1>Welcome to Beijing Chinese Restaurant</h1>
-			<p>We have been one of the leading authentic Chinese and modern Asian restaurants in the kingdom for more than a decade.</p>
-			<hr>
-		</div>
-		<div class="shadow"></div>
-	</section><!--  End billboard  -->
-	
+<div id="canvas">
 
-	<div class="flipbook-viewport">
-		<div class="container">
-			<div class="flipbook">
-				<div class="page" style="background-image:url(./img/menu1.png)"></div>
-				<div class="double" style="background-image:url(./img/menu2.png)"></div>
-				<div class="double" style="background-image:url(./img/menu3.png)"></div>
-				<div class="double" style="background-image:url(./img/menu4.png)"></div>
-				<div class="double" style="background-image:url(./img/menu5.png)"></div>
-				<div class="double" style="background-image:url(./img/menu6.png)"></div>
-				<div class="double" style="background-image:url(./img/menu7.png)"></div>
-				<div class="double" style="background-image:url(./img/menu8.png)"></div>
-				<div class="double" style="background-image:url(./img/menu9.png)"></div>
-				<div class="double" style="background-image:url(./img/menu10.png)"></div>
-				<div class="double" style="background-image:url(./img/menu11.png)"></div>
-				<div class="double" style="background-image:url(./img/menu12.png)"></div>
-				<div class="double" style="background-image:url(./img/menu13.png)"></div>
-				<div class="page" style="background-image:url(./img/menu14.png)"></div>
-			</div>
+<div class="zoom-icon zoom-icon-in"></div>
+
+<div class="magazine-viewport">
+	<div class="container">
+		<div class="magazine">
+			<!-- Next button -->
+			<div ignore="1" class="next-button"></div>
+			<!-- Previous button -->
+			<div ignore="1" class="previous-button"></div>
 		</div>
 	</div>
+</div>
 
+</div>
 
-	<script type="text/javascript">
+<script type="text/javascript">
+
+function loadApp() {
+
+ 	$('#canvas').fadeIn(1000);
+
+ 	var flipbook = $('.magazine');
+
+ 	// Check if the CSS was already loaded
 	
-	function loadApp() {
-	
-		var flipbook = $('.flipbook');
-	
-	 	// Check if the CSS was already loaded
-		
-		if (flipbook.width()==0 || flipbook.height()==0) {
-			setTimeout(loadApp, 10);
-			return;
-		}
-	
-		$('.flipbook .double').scissor();
-	
-		// Create the flipbook
-	
-		$('.flipbook').turn({
-	
-				width: 800,
-	
-				height: 900,
-				// Elevation
-	
-				elevation: 50,
-				
-				// Enable gradients
-	
-				gradients: true,
-				
-				// Auto center this flipbook
-	
-				autoCenter: true
-	
-		});
+	if (flipbook.width()==0 || flipbook.height()==0) {
+		setTimeout(loadApp, 10);
+		return;
 	}
 	
-	// Load the HTML4 version if there's not CSS transform
-	
-	yepnope({
-		test : Modernizr.csstransforms,
-		yep: ['js/turn.min.js'],
-		nope: ['js/turn.html4.min.js'],
-		both: ['js/scissor.min.js', 'css/double-page.css'],
-		complete: loadApp
+	// Create the flipbook
+
+	flipbook.turn({
+			
+			// Magazine width
+
+			width: 922,
+
+			// Magazine height
+
+			height: 600,
+
+			// Duration in millisecond
+
+			duration: 1000,
+
+			// Hardware acceleration
+
+			acceleration: !isChrome(),
+
+			// Enables gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true,
+
+			// Elevation from the edge of the flipbook when turning a page
+
+			elevation: 50,
+
+			// The number of pages
+
+			pages: 12,
+
+			// Events
+
+			when: {
+				turning: function(event, page, view) {
+					
+					var book = $(this),
+					currentPage = book.turn('page'),
+					pages = book.turn('pages');
+			
+					// Update the current URI
+
+					Hash.go('page/' + page).update();
+
+					// Show and hide navigation buttons
+
+					disableControls(page);
+					
+
+					$('.thumbnails .page-'+currentPage).
+						parent().
+						removeClass('current');
+
+					$('.thumbnails .page-'+page).
+						parent().
+						addClass('current');
+
+
+
+				},
+
+				turned: function(event, page, view) {
+
+					disableControls(page);
+
+					$(this).turn('center');
+
+					if (page==1) { 
+						$(this).turn('peel', 'br');
+					}
+
+				},
+
+				missing: function (event, pages) {
+
+					// Add pages that aren't in the magazine
+
+					for (var i = 0; i < pages.length; i++)
+						addPage(pages[i], $(this));
+
+				}
+			}
+
 	});
+
+	// Zoom.js
+
+	$('.magazine-viewport').zoom({
+		flipbook: $('.magazine'),
+
+		max: function() { 
+			
+			return largeMagazineWidth()/$('.magazine').width();
+
+		}, 
+
+		when: {
+
+			swipeLeft: function() {
+
+				$(this).zoom('flipbook').turn('next');
+
+			},
+
+			swipeRight: function() {
+				
+				$(this).zoom('flipbook').turn('previous');
+
+			},
+
+			resize: function(event, scale, page, pageElement) {
+
+				if (scale==1)
+					loadSmallPage(page, pageElement);
+				else
+					loadLargePage(page, pageElement);
+
+			},
+
+			zoomIn: function () {
+
+				$('.thumbnails').hide();
+				$('.made').hide();
+				$('.magazine').removeClass('animated').addClass('zoom-in');
+				$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+				
+				if (!window.escTip && !$.isTouch) {
+					escTip = true;
+
+					$('<div />', {'class': 'exit-message'}).
+						html('<div>Press ESC to exit</div>').
+							appendTo($('body')).
+							delay(2000).
+							animate({opacity:0}, 500, function() {
+								$(this).remove();
+							});
+				}
+			},
+
+			zoomOut: function () {
+
+				$('.exit-message').hide();
+				$('.thumbnails').fadeIn();
+				$('.made').fadeIn();
+				$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+
+				setTimeout(function(){
+					$('.magazine').addClass('animated').removeClass('zoom-in');
+					resizeViewport();
+				}, 0);
+
+			}
+		}
+	});
+
+	// Zoom event
+
+	if ($.isTouch)
+		$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+	else
+		$('.magazine-viewport').bind('zoom.tap', zoomTo);
+
+
+	// Using arrow keys to turn the page
+
+	$(document).keydown(function(e){
+
+		var previous = 37, next = 39, esc = 27;
+
+		switch (e.keyCode) {
+			case previous:
+
+				// left arrow
+				$('.magazine').turn('previous');
+				e.preventDefault();
+
+			break;
+			case next:
+
+				//right arrow
+				$('.magazine').turn('next');
+				e.preventDefault();
+
+			break;
+			case esc:
+				
+				$('.magazine-viewport').zoom('zoomOut');	
+				e.preventDefault();
+
+			break;
+		}
+	});
+
+	// URIs - Format #/page/1 
+
+	Hash.on('^page\/([0-9]*)$', {
+		yep: function(path, parts) {
+			var page = parts[1];
+
+			if (page!==undefined) {
+				if ($('.magazine').turn('is'))
+					$('.magazine').turn('page', page);
+			}
+
+		},
+		nop: function(path) {
+
+			if ($('.magazine').turn('is'))
+				$('.magazine').turn('page', 1);
+		}
+	});
+
+
+	$(window).resize(function() {
+		resizeViewport();
+	}).bind('orientationchange', function() {
+		resizeViewport();
+	});
+
+	// Events for thumbnails
+
+	$('.thumbnails').click(function(event) {
+		
+		var page;
+
+		if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+		
+			$('.magazine').turn('page', page[1]);
+		}
+	});
+
+	$('.thumbnails li').
+		bind($.mouseEvents.over, function() {
+			
+			$(this).addClass('thumb-hover');
+
+		}).bind($.mouseEvents.out, function() {
+			
+			$(this).removeClass('thumb-hover');
+
+		});
+
+	if ($.isTouch) {
 	
-	</script>
+		$('.thumbnails').
+			addClass('thumbanils-touch').
+			bind($.mouseEvents.move, function(event) {
+				event.preventDefault();
+			});
+
+	} else {
+
+		$('.thumbnails ul').mouseover(function() {
+
+			$('.thumbnails').addClass('thumbnails-hover');
+
+		}).mousedown(function() {
+
+			return false;
+
+		}).mouseout(function() {
+
+			$('.thumbnails').removeClass('thumbnails-hover');
+
+		});
+
+	}
 
 
-	<footer>
-		<div class="wrapper">
-			<div class="rights">
-				<p>©DigiMake - All Rights Reserved 2015 - Beijing Chinese Restaurant</p>
-			</div>
+	// Regions
 
-			<nav>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="./menu.html">Menu</a></li>
-					<li><a href="./karaoke.html">Karaoke/Party</a></li>
-					<li><a href="./promotions.html">Promotions/Events</a></li>
-					<li><a href="./contact.html">Contact Us</a></li>
-				</ul>
-			</nav>
-		</div>		
-	</footer><!--  End footer  -->
-    <script src='../ga.js'></script>
+	if ($.isTouch) {
+		$('.magazine').bind('touchstart', regionClick);
+	} else {
+		$('.magazine').click(regionClick);
+	}
+
+	// Events for the next button
+
+	$('.next-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('next-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('next-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('next-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('next-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('next');
+
+	});
+
+	// Events for the next button
+	
+	$('.previous-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('previous-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('previous-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('previous-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('previous-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('previous');
+
+	});
+
+
+	resizeViewport();
+
+	$('.magazine').addClass('animated');
+
+}
+
+// Zoom icon
+
+ $('.zoom-icon').bind('mouseover', function() { 
+ 	
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).addClass('zoom-icon-in-hover');
+
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).addClass('zoom-icon-out-hover');
+ 
+ }).bind('mouseout', function() { 
+ 	
+ 	 if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).removeClass('zoom-icon-in-hover');
+ 	
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).removeClass('zoom-icon-out-hover');
+
+ }).bind('click', function() {
+
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$('.magazine-viewport').zoom('zoomIn');
+ 	else if ($(this).hasClass('zoom-icon-out'))	
+		$('.magazine-viewport').zoom('zoomOut');
+
+ });
+
+ $('#canvas').hide();
+
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['js/turn.min.js'],
+	nope: ['js/turn.html4.min.js'],
+	both: ['js/zoom.min.js', 'js/magazine.js', 'css/magazine.css'],
+	complete: loadApp
+});
+
+</script>
+
 </body>
 </html>
-
