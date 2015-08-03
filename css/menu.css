@@ -91,6 +91,9 @@ h5, h6          { font-weight: bolder }
     height: 690px;
     position: relative;
 }
+.billboard.light a {
+    color: #333;
+}
 
 .billboard.light{
     background: url('../img/menu.jpg') no-repeat;   
@@ -100,16 +103,6 @@ h5, h6          { font-weight: bolder }
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-
-.billboard.dark{
-    background: url('../img/billboard2.jpg') no-repeat;
-    
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-
 
 .billboard .shadow{
     position: absolute;
